@@ -14,12 +14,14 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "dev": "tsup src/index.ts --format cjs,esm --watch"
+    "dev": "tsup src/index.ts --format cjs,esm --watch",
+    "publish-packages": "npm publish --provenance --access public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "tsup": "^8.5.1",
     "typescript": "^5.7.3"
   }
