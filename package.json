@@ -1,6 +1,6 @@
 {
   "name": "@base67/sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base67 public SDK",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
