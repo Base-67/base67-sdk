@@ -18,6 +18,10 @@
     "publish-packages": "npm publish --provenance --access public"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Base-67/base67-sdk.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
