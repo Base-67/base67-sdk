@@ -4,4 +4,8 @@ export * from './resources/users';
 export * from './resources/inquiries';
 export * from './resources/projects';
 export * from './resources/invoices';
+export * from './resources/schools';
+export * from './resources/adminAuth';
+export * from './types/schools';
+export * from './types/adminAuth';
 export * from './Base67';

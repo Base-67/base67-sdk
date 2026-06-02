@@ -4,6 +4,8 @@ import { Users } from './resources/users';
 import { Inquiries } from './resources/inquiries';
 import { Projects } from './resources/projects';
 import { Invoices } from './resources/invoices';
+import { Schools } from './resources/schools';
+import { AdminAuth } from './resources/adminAuth';
 
 export class Base67 extends BaseClient {
   public organizations = new Organizations(this);
@@ -11,6 +13,8 @@ export class Base67 extends BaseClient {
   public inquiries = new Inquiries(this);
   public projects = new Projects(this);
   public invoices = new Invoices(this);
+  public schools = new Schools(this);
+  public adminAuth = new AdminAuth(this);
 
   // Backward compatibility methods for existing code
   async getOrganizations() { return this.organizations.list(); }
@@ -28,4 +32,10 @@ export class Base67 extends BaseClient {
   
   async getInvoices(opts?: any) { return this.invoices.list(opts); }
   async createInvoice(data: any) { return this.invoices.create(data); }
+  
+  async getSchoolLeads() { return this.schools.list(); }
+  async createSchoolLead(data: any) { return this.schools.create(data); }
+  
+  async requestAdminLogin(email: string) { return this.adminAuth.requestLogin(email); }
+  async verifyAdminLogin(email: string, code: string) { return this.adminAuth.verifyLogin({ email, code }); }
 }
