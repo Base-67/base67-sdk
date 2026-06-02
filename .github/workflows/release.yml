@@ -41,7 +41,7 @@ jobs:
           commit: "chore(release): version packages"
           title: "chore(release): version packages"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Publish to NPM via OIDC
         if: steps.changesets.outputs.hasChangesets == 'false'
