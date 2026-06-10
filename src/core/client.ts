@@ -3,7 +3,7 @@ export class BaseClient {
   public apiKey: string | undefined;
 
   constructor(options?: { baseUrl?: string; apiKey?: string }) {
-    this.baseUrl = options?.baseUrl || 'https://base67-api.base67.workers.dev';
+    this.baseUrl = options?.baseUrl || 'https://base67-api.stanleyisaac134.workers.dev';
     this.apiKey = options?.apiKey;
   }
 
